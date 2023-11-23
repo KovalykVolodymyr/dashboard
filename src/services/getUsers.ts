@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { User } from 'types/user'
 
 export default async (

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Order } from 'types/order'
 
 export default async (
