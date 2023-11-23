@@ -1,0 +1,91 @@
+.ResponsiveTable {
+  border-radius: 4px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+
+  > table {
+    table-layout: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead {
+      > tr {
+        color: var(--color-light);
+        background-color: var(--color-dark);
+
+        > th {
+          padding: 15px 10px;
+          font-size: 14px;
+          font-weight: 400;
+          border-right: 1px solid var(--color-light);
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    tbody {
+      > tr {
+        background-color: var(--color-light);
+        transition: background-color 0.1s ease-in-out;
+
+        &.Active {
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--color-orange);
+
+            > td {
+              color: var(--color-light);
+              border-color: var(--color-orange);
+            }
+          }
+        }
+
+        &:nth-child(odd) {
+          background-color: var(--color-white);
+
+          > td {
+            border-right: 1px solid var(--color-light);
+          }
+        }
+
+        > td {
+          padding: 10px;
+          border-right: 1px solid var(--color-white);
+          transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+          &:last-child {
+            border-right: none;
+          }
+
+          &[data-key='avatar'] {
+            width: 100px;
+            text-align: center;
+
+            > img {
+              height: 30px;
+              box-shadow: var(--shadow-light);
+              border-radius: 20px;
+              width: 30px;
+              max-width: 30px;
+            }
+          }
+
+          &[data-key='email'],
+          &[data-key='date'],
+          &[data-key='shipped'] {
+            text-decoration: underline;
+          }
+
+          &[data-key='number'],
+          &[data-key='amount'] {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

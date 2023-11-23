@@ -1,0 +1,18 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--color-orange);
+  }
+
+  > h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+}

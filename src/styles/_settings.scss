@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+
+  main#layout-shift {
+    width: calc(100% - 80px);
+    transform: translateX(80px);
+
+    #wrapper {
+      margin: 0 auto;
+      padding: 30px 5px;
+      max-width: 1440px;
+      min-height: 100vh;
+
+      @media (min-width: 350px) {
+        padding: 40px 20px;
+      }
+    }
+  }
+
+  .full-height-page {
+    min-height: calc(100vh - 60px);
+  }
+}

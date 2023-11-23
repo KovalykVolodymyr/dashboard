@@ -1,0 +1,78 @@
+.UserFilters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  .Filters {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100%;
+    column-gap: 10px;
+
+    &:hover {
+      .FilterIcon > svg {
+        fill: var(--color-orange);
+      }
+    }
+
+    .FilterIcon {
+      width: 20px;
+
+      > svg {
+        fill: var(--color-dark-gray);
+        transition: fill 0.2s ease-in-out;
+      }
+    }
+
+    .Filter {
+      width: 100%;
+      &:hover {
+        > select {
+          border-color: var(--color-orange);
+        }
+      }
+
+      > label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        text-align: right;
+        opacity: 0.6;
+      }
+
+      > select {
+        width: 100%;
+        padding: 3px 8px;
+        font-size: 16px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--color-dark-gray);
+        border-radius: 2px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: border-color 0.2s ease-in-out;
+        cursor: pointer;
+
+        @media (min-width: 600px) {
+          max-width: 150px;
+        }
+      }
+
+      @media (min-width: 600px) {
+        width: auto;
+      }
+    }
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+      column-gap: 20px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    justify-content: flex-end;
+  }
+}
