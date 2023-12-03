@@ -17,8 +17,8 @@ const UserFilters: FC<Props> = ({ users, filter }) => {
   }, [users])
 
   const cities = useMemo<string[]>(() => {
-    const allCountries = users.map(({ city }) => city)
-    return Array.from(new Set(allCountries))
+    const allСities = users.map(({ city }) => city)
+    return Array.from(new Set(allСities))
   }, [users])
 
   const filters: Filter[] = [
